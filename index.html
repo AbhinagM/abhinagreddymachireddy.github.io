@@ -3422,6 +3422,158 @@
         }
 
         /* ========================================
+           PORTFOLIO AI BADGE (Contact Section) - COMPACT
+           ======================================== */
+
+        .portfolio-ai-badge-compact {
+            position: relative;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(16, 185, 129, 0.1));
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            border-radius: 1.5rem;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            grid-column: 1 / -1;
+            max-width: 400px;
+            margin: 2rem auto 0;
+        }
+
+        .portfolio-ai-badge-compact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 1.5rem;
+            padding: 2px;
+            background: linear-gradient(135deg, #06b6d4, #10b981);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        .ai-badge-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.3), transparent);
+            filter: blur(30px);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-ai-badge-compact:hover .ai-badge-glow {
+            opacity: 1;
+        }
+
+        .portfolio-ai-badge-compact:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.25);
+        }
+
+        .ai-badge-content-compact {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .ai-badge-icon-small {
+            flex-shrink: 0;
+        }
+
+        .ai-badge-icon-small svg {
+            display: block;
+        }
+
+        .ai-badge-text-compact {
+            text-align: left;
+            flex: 1;
+        }
+
+        .ai-badge-text-compact h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #06b6d4, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+
+        .ai-badge-text-compact p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .ai-badge-shine {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        /* Mobile Responsiveness for Compact Badge */
+        @media (max-width: 768px) {
+            .portfolio-ai-badge-compact {
+                padding: 1rem 1.25rem;
+                margin: 1.5rem 1rem 0;
+                max-width: 350px;
+            }
+
+            .ai-badge-text-compact h3 {
+                font-size: 1.25rem;
+            }
+
+            .ai-badge-text-compact p {
+                font-size: 0.85rem;
+            }
+
+            .ai-badge-icon-small svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        /* Remove old badge styles */
+        .portfolio-ai-badge {
+            display: none;
+        }
+
+        /* ========================================
+           PORTFOLIO AI SECTION STYLES
+           ======================================== */
+                font-size: 1rem;
+            }
+
+            .try-me-text {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* ========================================
            PORTFOLIO AI SECTION STYLES
            ======================================== */
 
@@ -4926,7 +5078,7 @@
                         <path d="M12 16l3 3 5-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                     </svg>
                 </div>
-                <div class="stat-value">1.2<span class="stat-plus">+</span></div>
+                <div class="stat-value">1.8<span class="stat-plus">+</span></div>
                 <div class="stat-label-new">Years Experience</div>
             </div>
             
@@ -5076,7 +5228,7 @@
             <div class="section-header fade-in">
                 <h2 class="section-title">Work Experience</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">1.2+ years across Business Analytics, Marketing & Operations</p>
+                <p class="section-subtitle">1.8+ years across Business Analytics, Marketing & Operations</p>
             </div>
 
             <div class="experience-grid">
@@ -5203,11 +5355,11 @@
                 <div class="experience-card fade-in" onclick="toggleExperience(this)">
                     <div class="exp-header">
                         <span class="project-expand-icon">▼</span>
-                        <span class="exp-duration-badge">2 months</span>
+                        <span class="exp-duration-badge">3 months</span>
                         <span class="exp-type-badge internship">Internship</span>
                         <h3 class="project-title">Content and Marketing Analyst</h3>
                         <p class="exp-company">Zersy</p>
-                        <p class="exp-location">Remote • Jul 2021 – Aug 2021</p>
+                        <p class="exp-location">Remote • Jul 2021 – Sep 2021</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Digital Marketing</span>
                             <span class="tech-tag">User Analytics</span>
@@ -5763,7 +5915,7 @@
             <div class="section-header fade-in">
                 <h2 class="section-title">Skills & <span style="color: var(--primary);">Expertise</span></h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">Data Analytics | AI/ML | Business Intelligence | Data Engineering</p>
+                <p class="section-subtitle">Data Analytics | Marketing Analytics | AI/ML | Business Intelligence | Data Engineering</p>
             </div>
 
             <!-- Core Skill Areas -->
@@ -5890,9 +6042,12 @@
                         <span class="skill-badge">Statistical Modeling</span>
                         <span class="skill-badge">Regression</span>
                         <span class="skill-badge">Hypothesis Testing</span>
+                        <span class="skill-badge">A/B Testing</span>
                         <span class="skill-badge">Correlation Analysis</span>
                         <span class="skill-badge">Clustering</span>
+                        <span class="skill-badge">Customer Segmentation</span>
                         <span class="skill-badge">Classification</span>
+                        <span class="skill-badge">Survey Design & Analysis</span>
                     </div>
                 </div>
 
@@ -5939,6 +6094,8 @@
                         <span class="skill-badge">Plotly</span>
                         <span class="skill-badge">Dashboard Design</span>
                         <span class="skill-badge">KPI Development</span>
+                        <span class="skill-badge">Marketing Metrics (CAC, ROAS)</span>
+                        <span class="skill-badge">Conversion Analysis</span>
                     </div>
                 </div>
 
@@ -6000,6 +6157,8 @@
                         <span class="skill-badge">PowerPoint</span>
                         <span class="skill-badge">Qualtrics</span>
                         <span class="skill-badge">Google Analytics</span>
+                        <span class="skill-badge">Marketing Attribution</span>
+                        <span class="skill-badge">Campaign Optimization</span>
                         <span class="skill-badge">GitHub</span>
                         <span class="skill-badge">VS Code</span>
                     </div>
@@ -6050,7 +6209,7 @@
             <div class="section-header fade-in">
                 <h2 class="section-title">Industry Certifications</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle">8 specialized credentials in Data Analytics, AI, BI, and People Analytics</p>
+                <p class="section-subtitle">9 specialized credentials in Marketing Analytics, Data Analytics, AI, BI, and People Analytics</p>
             </div>
 
             <div class="certs-carousel">
@@ -6066,6 +6225,29 @@
                     <h3 class="cert-title">Oracle Cloud Infrastructure 2025 Foundations Associate (1Z0-1085-25)</h3>
                     <p class="cert-provider">Oracle</p>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">Cloud-based AI and LLM deployment</p>
+                </div>
+
+                <!-- Meta Certified Marketing Science Professional -->
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Actual Meta Infinity Logo -->
+                            <defs>
+                                <linearGradient id="metaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0081FB"/>
+                                    <stop offset="50%" style="stop-color:#0064E0"/>
+                                    <stop offset="100%" style="stop-color:#0081FB"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Meta Infinity Symbol -->
+                            <path d="M12 24C12 18.5 14.5 14 18 14C20.5 14 22.5 15.5 24 18C25.5 15.5 27.5 14 30 14C33.5 14 36 18.5 36 24C36 29.5 33.5 34 30 34C27.5 34 25.5 32.5 24 30C22.5 32.5 20.5 34 18 34C14.5 34 12 29.5 12 24Z" fill="url(#metaGradient)" stroke="url(#metaGradient)" stroke-width="1.5"/>
+                            <ellipse cx="18" cy="24" rx="4" ry="7" fill="url(#metaGradient)"/>
+                            <ellipse cx="30" cy="24" rx="4" ry="7" fill="url(#metaGradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">Meta Certified Marketing Science Professional</h3>
+                    <p class="cert-provider">Meta & Coursera</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Marketing data analysis, campaign optimization, A/B testing, and Meta Ads Manager</p>
                 </div>
 
                 <!-- SQL Advanced - HackerRank -->
@@ -6168,170 +6350,6 @@
                     <p class="cert-provider">Internshala Trainings</p>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">Financial analysis and business valuation techniques</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="contact-modern fade-in">
-                <div class="contact-location">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 2C7.24 2 5 4.24 5 7c0 4.5 5 11 5 11s5-6.5 5-11c0-2.76-2.24-5-5-5zm0 6.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/>
-                    </svg>
-                    <span>United States</span>
-                </div>
-
-                <h2 class="contact-main-title">Ready to Build Something Data-Driven Together?</h2>
-                
-                <p class="contact-description">
-                    I'm actively seeking opportunities in Data Analytics, Business Analytics, 
-                    Business Intelligence, Data Engineering, and AI-driven analytics roles. Let's 
-                    discuss how I can contribute to your team.
-                </p>
-
-                <div class="contact-cards-grid">
-                    <a href="mailto:mabhinagreddy@gmail.com" class="contact-info-card">
-                        <div class="contact-card-icon email-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="white"/>
-                            </svg>
-                        </div>
-                        <div class="contact-card-content">
-                            <div class="contact-card-label">Email</div>
-                            <div class="contact-card-value">mabhinagreddy@gmail.com</div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/abhinag-reddy-machireddy-138704216/" target="_blank" rel="noopener noreferrer" class="contact-info-card">
-                        <div class="contact-card-icon linkedin-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6.5v-7H9v7zM7.7 8.7c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4 0 .7-.6 1.4-1.4 1.4zM18 17h-2.4v-3.6c0-1.6-1.9-1.5-1.9 0V17h-2.5v-7h2.5v1.2c.9-1.6 4.3-1.7 4.3 1.5V17z" fill="white"/>
-                            </svg>
-                        </div>
-                        <div class="contact-card-content">
-                            <div class="contact-card-label">LinkedIn</div>
-                            <div class="contact-card-value">Connect with me</div>
-                        </div>
-                    </a>
-
-                    <a href="https://calendly.com/mabhinagreddy/30min" target="_blank" rel="noopener noreferrer" class="contact-info-card">
-                        <div class="contact-card-icon calendly-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" fill="white"/>
-                                <path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" fill="white"/>
-                            </svg>
-                        </div>
-                        <div class="contact-card-content">
-                            <div class="contact-card-label">Schedule Meeting</div>
-                            <div class="contact-card-value">Book a 30-min call</div>
-                        </div>
-                    </a>
-
-                    <div class="contact-info-card chatbot-card" onclick="openChatbot()">
-                        <div class="contact-card-icon chatbot-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" fill="white"/>
-                                <circle cx="8" cy="10" r="1.5" fill="white"/>
-                                <circle cx="12" cy="10" r="1.5" fill="white"/>
-                                <circle cx="16" cy="10" r="1.5" fill="white"/>
-                            </svg>
-                        </div>
-                        <div class="contact-card-content">
-                            <div class="contact-card-label">AI Assistant</div>
-                            <div class="contact-card-value">Ask about my background</div>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="mailto:mabhinagreddy@gmail.com" class="cta-button-large">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
-                    </svg>
-                    <span>Let's Build Something Data-Driven Together</span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 3l7 7-7 7M17 10H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Animated Wave Background -->
-        <div class="section-wave">
-            <!-- Gradient Background -->
-            <div class="wave-background"></div>
-            
-            <!-- Wave Layer 1 - Deepest -->
-            <div class="wave-layer wave-layer-1">
-                <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
-                    <path d="M0,60 C300,30 400,90 600,70 C800,50 900,100 1200,80 
-                             L1200,180 L0,180 Z" 
-                          fill="url(#wave-gradient-1)" />
-                    <defs>
-                        <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:rgba(15, 35, 85, 0.6);stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:rgba(10, 25, 65, 0.7);stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:rgba(5, 15, 50, 0.8);stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            
-            <!-- Wave Layer 2 - Middle -->
-            <div class="wave-layer wave-layer-2">
-                <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
-                    <path d="M0,70 C250,40 350,95 600,80 C850,65 950,105 1200,90 
-                             L1200,180 L0,180 Z" 
-                          fill="url(#wave-gradient-2)" />
-                    <defs>
-                        <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:rgba(10, 30, 75, 0.5);stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:rgba(6, 20, 60, 0.6);stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:rgba(3, 12, 45, 0.7);stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            
-            <!-- Wave Layer 3 - Surface -->
-            <div class="wave-layer wave-layer-3">
-                <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
-                    <path d="M0,80 C200,50 400,100 600,85 C800,70 1000,110 1200,95 
-                             L1200,180 L0,180 Z" 
-                          fill="url(#wave-gradient-3)" />
-                    <defs>
-                        <linearGradient id="wave-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:rgba(6, 182, 212, 0.15);stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.2);stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:rgba(6, 182, 212, 0.15);stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            
-            <!-- Glowing Particles -->
-            <div class="wave-particles">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
             </div>
         </div>
     </section>
@@ -6465,6 +6483,156 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-modern fade-in">
+                <div class="contact-location">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 2C7.24 2 5 4.24 5 7c0 4.5 5 11 5 11s5-6.5 5-11c0-2.76-2.24-5-5-5zm0 6.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/>
+                    </svg>
+                    <span>United States</span>
+                </div>
+
+                <h2 class="contact-main-title">Ready to Build Something Data-Driven Together?</h2>
+                
+                <p class="contact-description">
+                    I'm actively seeking opportunities in Data Analytics, Business Analytics, 
+                    Business Intelligence, Data Engineering, and AI-driven analytics roles. Let's 
+                    discuss how I can contribute to your team.
+                </p>
+
+                <div class="contact-cards-grid">
+                    <a href="mailto:mabhinagreddy@gmail.com" class="contact-info-card">
+                        <div class="contact-card-icon email-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <div class="contact-card-label">Email</div>
+                            <div class="contact-card-value">mabhinagreddy@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/abhinag-reddy-machireddy-138704216/" target="_blank" rel="noopener noreferrer" class="contact-info-card">
+                        <div class="contact-card-icon linkedin-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6.5v-7H9v7zM7.7 8.7c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4 0 .7-.6 1.4-1.4 1.4zM18 17h-2.4v-3.6c0-1.6-1.9-1.5-1.9 0V17h-2.5v-7h2.5v1.2c.9-1.6 4.3-1.7 4.3 1.5V17z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <div class="contact-card-label">LinkedIn</div>
+                            <div class="contact-card-value">Connect with me</div>
+                        </div>
+                    </a>
+
+                    <a href="https://calendly.com/mabhinagreddy/30min" target="_blank" rel="noopener noreferrer" class="contact-info-card">
+                        <div class="contact-card-icon calendly-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" fill="white"/>
+                                <path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <div class="contact-card-label">Schedule Meeting</div>
+                            <div class="contact-card-value">Book a 30-min call</div>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="mailto:mabhinagreddy@gmail.com" class="cta-button-large">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+                    </svg>
+                    <span>Let's Build Something Data-Driven Together</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 3l7 7-7 7M17 10H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Animated Wave Background -->
+        <div class="section-wave">
+            <!-- Gradient Background -->
+            <div class="wave-background"></div>
+            
+            <!-- Wave Layer 1 - Deepest -->
+            <div class="wave-layer wave-layer-1">
+                <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
+                    <path d="M0,60 C300,30 400,90 600,70 C800,50 900,100 1200,80 
+                             L1200,180 L0,180 Z" 
+                          fill="url(#wave-gradient-1)" />
+                    <defs>
+                        <linearGradient id="wave-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:rgba(15, 35, 85, 0.6);stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:rgba(10, 25, 65, 0.7);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:rgba(5, 15, 50, 0.8);stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            
+            <!-- Wave Layer 2 - Middle -->
+            <div class="wave-layer wave-layer-2">
+                <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
+                    <path d="M0,70 C250,40 350,95 600,80 C850,65 950,105 1200,90 
+                             L1200,180 L0,180 Z" 
+                          fill="url(#wave-gradient-2)" />
+                    <defs>
+                        <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:rgba(10, 30, 75, 0.5);stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:rgba(6, 20, 60, 0.6);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:rgba(3, 12, 45, 0.7);stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            
+            <!-- Wave Layer 3 - Surface -->
+            <div class="wave-layer wave-layer-3">
+                <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
+                    <path d="M0,80 C200,50 400,100 600,85 C800,70 1000,110 1200,95 
+                             L1200,180 L0,180 Z" 
+                          fill="url(#wave-gradient-3)" />
+                    <defs>
+                        <linearGradient id="wave-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:rgba(6, 182, 212, 0.15);stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:rgba(59, 130, 246, 0.2);stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:rgba(6, 182, 212, 0.15);stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            
+            <!-- Glowing Particles -->
+            <div class="wave-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer>
@@ -9958,43 +10126,134 @@
         z-index: 9999;
     }
 
-    .chatbot-toggle {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #00d4ff, #667eea);
-        border: none;
-        color: white;
-        font-size: 2rem;
+    /* ========================================
+       FLOATING PORTFOLIO AI BADGE (Bottom Right)
+       ======================================== */
+    
+    .floating-portfolio-ai {
+        position: relative;
+        padding: 0.65rem 1rem 0.65rem 0.75rem;
+        background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(16, 185, 129, 0.15));
+        backdrop-filter: blur(10px);
+        border: 2px solid transparent;
+        border-radius: 50px;
         cursor: pointer;
-        box-shadow: 0 10px 40px rgba(0, 212, 255, 0.5);
         transition: all 0.3s ease;
         display: flex;
         align-items: center;
-        justify-content: center;
-        position: relative;
+        gap: 0.5rem;
+        box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);
+        overflow: hidden;
     }
 
-    .chatbot-toggle:hover {
-        transform: scale(1.1);
-        box-shadow: 0 15px 50px rgba(0, 212, 255, 0.7);
-    }
-
-    .chatbot-toggle::before {
+    .floating-portfolio-ai::before {
         content: '';
         position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50px;
+        padding: 2px;
+        background: linear-gradient(135deg, #06b6d4, #10b981);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    .floating-ai-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #00d4ff, #667eea);
-        animation: pulse-ring 2s infinite;
+        background: radial-gradient(circle, rgba(6, 182, 212, 0.4), transparent);
+        filter: blur(20px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .floating-portfolio-ai:hover .floating-ai-glow {
+        opacity: 1;
+    }
+
+    .floating-portfolio-ai:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(6, 182, 212, 0.5);
+    }
+
+    .floating-ai-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .floating-ai-icon {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .floating-ai-text {
+        font-size: 0.9rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #06b6d4, #10b981);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        white-space: nowrap;
+    }
+
+    .floating-ai-pulse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50px;
+        border: 2px solid rgba(6, 182, 212, 0.5);
+        animation: pulse-badge 2s infinite;
         z-index: -1;
     }
 
-    @keyframes pulse-ring {
-        0% { transform: scale(1); opacity: 0.5; }
-        50% { transform: scale(1.2); opacity: 0; }
-        100% { transform: scale(1); opacity: 0; }
+    @keyframes pulse-badge {
+        0% { 
+            transform: scale(1);
+            opacity: 0.5;
+        }
+        50% { 
+            transform: scale(1.1);
+            opacity: 0;
+        }
+        100% { 
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+
+    /* Mobile - Make it slightly smaller */
+    @media (max-width: 768px) {
+        .floating-portfolio-ai {
+            padding: 0.55rem 0.85rem 0.55rem 0.65rem;
+        }
+
+        .floating-ai-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .floating-ai-text {
+            font-size: 0.8rem;
+        }
+    }
+
+    /* Old toggle styles - hidden */
+    .chatbot-toggle {
+        display: none;
     }
 
     .chatbot-window {
@@ -10247,9 +10506,30 @@
 
     </style>
 
-    <!-- Chatbot HTML -->
+    <!-- Floating Portfolio AI Badge -->
     <div class="chatbot-container">
-        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat">💬</button>
+        <div class="floating-portfolio-ai" id="chatbotToggle" onclick="openChatbot()">
+            <div class="floating-ai-glow"></div>
+            <div class="floating-ai-content">
+                <div class="floating-ai-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48" fill="none">
+                        <defs>
+                            <linearGradient id="floatingAiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#06b6d4"/>
+                                <stop offset="100%" style="stop-color:#10b981"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M36 12H12c-2.2 0-4 1.8-4 4v24l6-6h22c2.2 0 4-1.8 4-4V16c0-2.2-1.8-4-4-4z" 
+                              fill="url(#floatingAiGradient)"/>
+                        <circle cx="18" cy="22" r="2.5" fill="white"/>
+                        <circle cx="24" cy="22" r="2.5" fill="white"/>
+                        <circle cx="30" cy="22" r="2.5" fill="white"/>
+                    </svg>
+                </div>
+                <span class="floating-ai-text">Portfolio AI</span>
+            </div>
+            <div class="floating-ai-pulse"></div>
+        </div>
         
         <div class="chatbot-window" id="chatbotWindow">
             <div class="chatbot-header">
@@ -10358,7 +10638,7 @@
         gpa: "3.85/4.0",
         graduation: "December 2025",
         concentration: "Business Analytics",
-        yearsExp: "1.2+",
+        yearsExp: "1.8+",
         
         skills: {
             programming: "Python, R, SQL",
@@ -10658,70 +10938,67 @@ If there's anything about his background you'd like me to clarify before you rea
 feel free to ask.`;
         }
         
+        // 📊 MARKETING ANALYTICS SKILLS & TOOLS
+        if (/(marketing.*skill|marketing.*tool|google analytics|ga4|semrush|marketing.*platform|marketing.*tech)/i.test(q)) {
+            return `Abhinag has the core marketing analytics skill set. At AlgoShack, he contributed to 22% more qualified leads and 18% better ad engagement through data-driven campaign optimization.<br><br>
+
+His technical stack translates well to marketing: Python/R for analysis, SQL for data extraction, Power BI/Tableau for dashboards, and statistical modeling for attribution and forecasting (82% accuracy on his forecasting project). While specific platforms like Google Analytics or marketing automation tools aren't explicitly listed, his data engineering foundation means he picks up new tools quickly – that's how he went from mechanical engineering to building AI systems.`;
+        }
+        
+        // 📈 MARKETING METRICS & KPIs
+        if (/(marketing.*metric|kpi|cac|roas|conversion|acquisition cost|customer.*acquisition|return.*ad|ltv|click.*through)/i.test(q)) {
+            return `Abhinag understands marketing metrics from his AlgoShack experience where he tracked campaign performance and contributed to lead generation improvements. His analytical approach fits marketing KPIs well: he's worked with conversion metrics (67% engagement increase from content optimization), performance tracking (22% qualified lead increase), and ROI analysis.<br><br>
+
+His forecasting work (82% accuracy) and business analytics background mean he's comfortable with the full marketing funnel – CAC, ROAS, conversion rates, attribution modeling. He thinks in terms of measurable business outcomes, which is exactly what marketing analytics requires.`;
+        }
+        
+        // 🔬 MARKETING RESEARCH & CONSUMER INSIGHTS
+        if (/(market research|consumer.*insight|consumer.*behavior|audience.*research|customer.*research|segmentation|survey)/i.test(q)) {
+            return `Abhinag has practical research experience from multiple angles. At AlgoShack, he analyzed campaign performance and user engagement to identify what drove qualified leads. His content analytics work involved tracking user behavior patterns and drop-off points – essentially consumer journey analysis.<br><br>
+
+He also built an HR survey system at UnyKloud that improved satisfaction tracking by 40%, showing he understands survey design and analysis. His statistical background (R programming, data analysis) supports market research methodologies. What's interesting is his natural instinct to analyze patterns and extract insights – that's what market research is fundamentally about.`;
+        }
+        
+        // 🎯 CAMPAIGN OPTIMIZATION & A/B TESTING
+        if (/(campaign.*optimiz|campaign.*analysis|a\/b test|ab test|experiment|test.*variation|marketing.*performance)/i.test(q)) {
+            return `Campaign optimization is where Abhinag's analytical thinking shines. At AlgoShack, his campaign analysis work contributed to 22% more qualified leads and 18% better ad engagement – that's direct evidence of optimization impact.<br><br>
+
+His content work showed the same approach: track engagement patterns, identify what works, optimize accordingly (67% increase). He thinks in terms of test, measure, iterate – which is exactly the A/B testing mindset. His statistical background (R programming, Python for analysis) supports experimental design and significance testing.`;
+        }
+        
+        // 👥 CUSTOMER SEGMENTATION & TARGETING
+        if (/(segment|customer.*segment|audience.*segment|target.*audience|persona|cohort.*analysis)/i.test(q)) {
+            return `Abhinag's analytical work naturally involves segmentation thinking. His NBA analytics project identified 4 distinct player archetypes through clustering – same methodology that applies to customer segmentation. His forecasting work (restaurant demand with 82% accuracy) required understanding different customer patterns and behaviors.<br><br>
+
+At AlgoShack, analyzing which channels drove qualified leads meant understanding audience segments and their characteristics. His machine learning background (K-Means clustering, classification models) gives him the technical tools for segmentation, and his business analyst experience means he understands how to make segments actionable.`;
+        }
+        
+        // 📊 MARKETING ATTRIBUTION & ANALYTICS
+        if (/(attribution|multi.*touch|marketing.*attribution|channel.*performance|marketing.*mix|media.*mix)/i.test(q)) {
+            return `Attribution modeling fits well with Abhinag's analytical strengths. His forecasting work (82% accuracy with time-series models) shows he can build the kind of statistical models attribution requires. At AlgoShack, he analyzed which marketing channels drove qualified leads – essentially attribution analysis.<br><br>
+
+His technical foundation supports attribution work: Python for modeling, SQL for data extraction across touchpoints, statistical methods for contribution analysis. He's comfortable working with complex, multi-source data (ClimateGPT integrated 62 different tools), which is what multi-touch attribution demands.`;
+        }
+        
         // 💼 EXPERIENCE
         if (/(experience|work|job|career|employment|worked|positions|years)/i.test(q)) {
-            return `Abhinag's professional experience is about 1.2 years across several organizations, but what stands 
-out is the breadth and measurable impact he's achieved in that time.<br><br>
+            return `Abhinag has 1.8 years of professional experience across several roles, with measurable impact in each. At UnyKloud Technologies (Business Analyst, 7 months), he managed 100+ properties and delivered 20% operational efficiency gains and 40% improvement in satisfaction tracking.<br><br>
 
-His most substantial role was as <strong>Business Analyst at UnyKloud Technologies</strong> (May-Nov 2023), 
-where he managed a portfolio of 100+ properties for a Canadian client and delivered measurable results: 
-20% operational efficiency gains and a 40% improvement in team satisfaction tracking.<br><br>
-
-Before that, he worked as <strong>Business Analyst Intern at GoGreen Analytics</strong> (Nov 2022-Apr 2023), 
-focusing on sustainability for rural India manufacturing plants. He identified 18% potential energy savings 
-and projected 25-30% OPEX reductions — practical business-focused work rather than purely academic.<br><br>
-
-He also spent time at <strong>AlgoShack</strong> as a Marketing Analytics Intern (Jul-Oct 2022), where his work 
-contributed to a 22% increase in qualified leads and 18% better ad engagement.<br><br>
-
-The common thread across these roles is his ability to take messy data, turn it into something actionable, 
-and deliver tangible business outcomes.`;
+Before that, GoGreen Analytics (Business Analyst Intern, 6 months) where he identified 18% energy savings for manufacturing plants, and AlgoShack (Marketing Analytics Intern, 4 months) where his work contributed to 22% more qualified leads. The pattern is consistent: take messy data, turn it actionable, deliver business outcomes.`;
         }
         
         // 🚀 PROJECTS - GENERAL
         if (/(project|portfolio|built|created|developed)/i.test(q) && !/(specific|which|name)/i.test(q)) {
-            return `Abhinag's project portfolio is probably his strongest asset. He's built over 20 data-driven 
-projects, and what's impressive is that most of them solve real business problems rather than being purely 
-academic exercises.<br><br>
+            return `Abhinag's built 20+ data-driven projects, and what stands out is they solve real business problems. ClimateGPT (79% accuracy on 34,000+ data points) is being used for policy intelligence at Erasmus AI. His restaurant forecasting system delivers 40% inventory optimization with 82% accuracy. Vehicle ECU prediction achieved 88% accuracy with 78% fewer false negatives.<br><br>
 
-A few that stand out:<br><br>
-
-<strong>ClimateGPT MCP Server:</strong> An AI system he built that integrates climate and economic 
-datasets using 62 different tools. It achieved 79% accuracy on 34,000+ data points, and it's actually 
-being used for policy intelligence work. Not just a side project.<br><br>
-
-<strong>AI Restaurant Forecasting System:</strong> Built for real-world inventory optimization in restaurants. 
-The system predicts demand with 82% accuracy and has delivered 40% inventory optimization. Uses Prophet 
-and ARIMA models, designed for actual deployment.<br><br>
-
-<strong>Vehicle ECU Failure Prediction:</strong> Machine learning project with 88% accuracy that reduced 
-false negatives by 78%, using ensemble methods (Random Forest + XGBoost). The kind of work that shows 
-he understands both the modeling and the business impact.<br><br>
-
-His projects span AI/LLMs, machine learning, and business intelligence, with consistent emphasis on 
-measurable outcomes.`;
+The consistent theme is measurable business impact – these aren't just notebooks on GitHub, they're systems designed for deployment. That practical approach comes from his startup experience where you build things that have to actually work.`;
         }
         
         // 🛠️ SKILLS - TECHNICAL
         if (/(skill|technical|tools|technologies|proficient|know|capable)/i.test(q)) {
-            return `Abhinag's skill set is centered around data analytics, machine learning, and business intelligence — 
-basically the full pipeline from raw data to business insights.<br><br>
+            return `Abhinag's skill set covers the full analytics pipeline – Python, R, and SQL for programming; Power BI and Tableau for visualization; machine learning with Scikit-learn, TensorFlow, and newer LLM technologies.<br><br>
 
-On the <strong>programming side</strong>, he works primarily with Python, R, and SQL. Python is his main 
-workhorse for everything from data engineering to ML model development, and he's comfortable with the 
-full ecosystem (Pandas, NumPy, Scikit-learn, TensorFlow). R comes into play mostly for statistical 
-modeling and R Shiny dashboards. SQL is his go-to for data extraction and database work.<br><br>
-
-For <strong>business intelligence</strong>, he's Microsoft Power BI certified and also works with Tableau. 
-His Power BI projects show he understands not just the tool but data modeling, DAX formulas, and how 
-to build dashboards that non-technical stakeholders actually find useful.<br><br>
-
-On the <strong>ML/AI front</strong>, he's worked with standard algorithms (Random Forest, XGBoost, 
-Decision Trees, K-Means) as well as newer LLM technologies. His projects show he can go from exploratory 
-analysis through model deployment, not just notebooks that sit in GitHub.<br><br>
-
-He's also done work with Oracle Cloud (certified) and has AWS basics. The domains he's touched include 
-healthcare, finance, marketing, HR analytics, climate data, and industrial operations.`;
+What's useful is he's touched multiple domains: healthcare, finance, marketing, HR analytics, climate data, industrial operations. That versatility means he picks up new business contexts quickly. He's Microsoft Power BI certified, Oracle Cloud certified, and his projects show he can go from data extraction through model deployment – not just analysis work.`;
         }
         
         // 🐍 PYTHON
@@ -10790,19 +11067,11 @@ financial modeling, and HR analytics).`;
         
         // 🏆 CERTIFICATIONS
         if (/(certification|certified|certificate|credential)/i.test(q)) {
-            return `Abhinag holds 8 professional certifications, which is quite a lot for someone at his 
-experience level — it shows he's intentional about building and validating his skills.<br><br>
+            return `Abhinag holds 9 professional certifications – more than typical for 1.8 years experience, showing he's intentional about building validated skills.<br><br>
 
-On the <strong>technical side</strong>, he's Microsoft Power BI Data Analyst certified, Oracle Cloud 
-Infrastructure Generative AI Professional certified, SQL Advanced certified from HackerRank, and 
-R Programming certified through Johns Hopkins University.<br><br>
+On the technical side: Microsoft Power BI Data Analyst, Meta Certified Marketing Science Professional, Oracle Cloud Infrastructure Generative AI, SQL Advanced (HackerRank), and R Programming (Johns Hopkins). On the business side: Business Analytics, Financial Modeling, HR Analytics, and Product Management.<br><br>
 
-He's also picked up <strong>business-focused certifications</strong> in Business Analytics (Internshala), 
-Financial Modeling & Valuation (Corporate Finance Institute), HR Analytics (SHRM), and Product Management 
-Essentials (Product School).<br><br>
-
-What's useful about this mix is that it shows he understands both sides — the technical work (data, models, 
-tools) and the business context (finance, HR, product) where that work gets applied.`;
+The Meta Certified Marketing Science Professional credential is particularly relevant – it covers marketing data analysis, campaign optimization, A/B testing, and Meta Ads Manager. Combined with his AlgoShack experience (22% leads, 18% engagement), it shows marketing analytics depth.`;
         }
         
         // 📈 TABLEAU
@@ -10863,33 +11132,17 @@ related fields.`;
         }
         
         // 💪 STRENGTHS / WHY HIRE
-        if (/(strength|why|best|advantage|stand out|unique)/i.test(q)) {
-            return `If I had to sum up what makes Abhinag a strong candidate, I'd point to three things:<br><br>
+        if (/(strength|why hire|why.*candidate)/i.test(q) && !/(different|unique|stand out)/i.test(q)) {
+            return `If I had to sum up Abhinag's strengths: he delivers measurable results (79-98% accuracy, 18-67% improvements), has versatile skills across the full analytics pipeline, and always connects technical work to business impact.<br><br>
 
-<strong>First, he delivers measurable results.</strong> His projects consistently show quantifiable 
-outcomes — 79-98% accuracy rates, 18-67% performance improvements, 40% inventory optimization. These 
-aren't vanity metrics; they're the kind of numbers that matter to a business.<br><br>
-
-<strong>Second, he has an unusually broad skill set.</strong> He can handle the full analytics pipeline: 
-Python for engineering and ML, R for statistical work, Power BI and Tableau for visualization, SQL for 
-data work, and newer LLM/AI technologies. That versatility makes him valuable across different types 
-of projects.<br><br>
-
-<strong>Third, he combines technical depth with business understanding.</strong> His certifications 
-in financial modeling, HR analytics, and product management — on top of the technical certs — show 
-he gets that data work isn't done in a vacuum. It has to solve actual business problems.`;
+What's interesting is he was thinking like an analyst before he even knew what data analytics was – that natural instinct combined with 20+ real-world projects makes him effective quickly in new contexts.`;
         }
         
         // 🌍 CLIMATEGPT PROJECT
         if (/(climategpt|climate gpt|mcp)/i.test(q)) {
-            return `The ClimateGPT MCP Server is probably Abhinag's most technically sophisticated project 
-— it's an AI system that integrates climate and economic datasets using 62 different tools, built on 
-the Model Context Protocol.<br><br>
+            return `ClimateGPT is Abhinag's capstone project – an AI system for Erasmus AI that integrates 62 data tools and achieved 79% accuracy on 34,000+ data points. It's actually being used for policy intelligence, not just sitting on GitHub.<br><br>
 
-The system achieved 79% accuracy on over 34,000 data points and is being used for policy intelligence 
-work at Erasmus AI. What makes it interesting isn't just the accuracy numbers — it's that he built 
-a production-ready system that handles real-world complexity: multiple data sources, different formats, 
-RAG pipelines, FastAPI backend, LLM orchestration.`;
+What made it challenging was the shift from business analyst work to building an MCP server with LLMs. But he realized midway it was the same analytical thinking he'd always done – extract data, understand what to analyze, deliver insights. Just newer tools. That project inspired him to build this AI assistant you're talking to.`;
         }
         
         // 🍽️ RESTAURANT AI PROJECT
@@ -10946,48 +11199,90 @@ His certifications in Financial Modeling, HR Analytics, and Product Management s
 business functions. His projects span operations, marketing, sustainability, and product analytics.<br><br>
 
 <strong>What to consider:</strong><br>
-His professional experience is about 1.2 years, so if the role requires 3-5 years specifically in BA work, 
+His professional experience is about 1.8 years, so if the role requires 3-5 years specifically in BA work, 
 that's a gap. However, the depth and impact of his work compensates for the shorter timeline in many cases.`;
         }
         
         // 🎯 MARKETING ANALYST FIT
         if (/(marketing analyst|marketing analytics)/i.test(q) && /(fit|good|suitable|match|qualified)/i.test(q)) {
-            return `Abhinag has relevant experience for Marketing Analyst roles. Here's the fit assessment:<br><br>
+            return `Abhinag's a strong fit for Marketing Analyst roles. He has direct marketing experience from AlgoShack (22% qualified lead increase, 18% better ad engagement) plus the full analytics toolkit: SQL, Python, R, Power BI, Tableau, and statistical modeling for attribution and forecasting (82% accuracy).<br><br>
 
-<strong>Direct marketing experience:</strong><br>
-He worked as a Marketing Analytics Intern at AlgoShack (Jul-Oct 2022), where his work contributed to a 22% 
-increase in qualified leads and 18% improvement in ad engagement. So he understands the core metrics and 
-analytics challenges in marketing contexts.<br><br>
+What makes him valuable is he goes beyond surface reporting – his content analytics work drove 67% engagement increase by tracking user behavior patterns. He can build custom analyses, predictive models, and automated dashboards. If the role needs specific platforms like Google Analytics, his technical foundation means he picks up tools fast (went from mechanical engineering to building AI systems).<br><br>
 
-<strong>Technical capabilities:</strong><br>
-He has the full analytics toolkit that marketing teams need: SQL for data extraction, Python and R for analysis, 
-Power BI and Tableau for dashboards and reporting, and statistical modeling for attribution and forecasting. 
-His forecasting project (82% accuracy) shows he can build the kind of predictive models marketing teams use 
-for planning.<br><br>
+His combination of business understanding (Product Management certified) and technical depth means he delivers insights that drive decisions, not just reports.`;
+        }
+        
+        // 💬 SOFT SKILLS / COMMUNICATION / STAKEHOLDER MANAGEMENT
+        if (/(soft skill|communication|stakeholder|explain.*technical|non-technical|present)/i.test(q)) {
+            return `Abhinag's worked across different teams – stakeholders, CEOs, clients – which taught him to translate technical work into business language. One example: at UnyKloud, when HR had tracking issues, he didn't just build a solution; he explained the data insights in a way that led to a 40% improvement in satisfaction scores.<br><br>
 
-<strong>What might be partial matches:</strong><br>
-If the role requires deep experience with specific marketing platforms (Google Analytics, Adobe Analytics, 
-marketing automation tools), those aren't explicitly called out. However, his technical foundation means he 
-could pick up platform-specific tools quickly.<br><br>
+His startup experience meant he had to communicate with everyone from developers to C-suite, adjusting his approach based on the audience. That's probably why his projects consistently deliver business outcomes – he understands what different stakeholders care about.`;
+        }
+        
+        // 🧩 PROBLEM-SOLVING / CHALLENGES
+        if (/(problem.*solv|difficult.*problem|challenge.*faced|tough.*situation)/i.test(q) && !/(professional|career|biggest)/i.test(q)) {
+            return `Good example: when he was building ClimateGPT, the challenge wasn't just technical – it was figuring out how to integrate 62 different data tools into one coherent system. He approached it methodically: understand the data sources, identify patterns, build connections incrementally.<br><br>
 
-<strong>What he brings that's valuable:</strong><br>
-His combination of business understanding (he has a Product Management certification) and technical depth 
-means he can go beyond surface-level reporting. He can build custom analyses, predictive models, and 
-automated dashboards that many marketing teams need.`;
+That's his general approach – break complex problems into manageable pieces, validate as you go, focus on what delivers value. It's why his projects have high accuracy rates (79-98%) – he's systematic about problem-solving, not just throwing algorithms at data.`;
+        }
+        
+        // ⏱️ TIGHT DEADLINES / PRESSURE
+        if (/(deadline|tight.*deadline|pressure|fast.*paced|time.*crunch)/i.test(q)) {
+            return `His startup experience at UnyKloud and work on ClimateGPT with daily standups taught him to deliver under pressure. When you're managing 100+ properties for a client or working on a capstone with real deadlines, you learn to prioritize what matters and execute efficiently.<br><br>
+
+He's comfortable with the pace of startups where priorities shift and you need to adapt quickly while maintaining quality.`;
+        }
+        
+        // ☁️ CLOUD / DEPLOYMENT EXPERIENCE
+        if (/(cloud|aws|azure|deployment|production|deploy)/i.test(q) && !/(oracle)/i.test(q)) {
+            return `Abhinag has Oracle Cloud certification and has worked with AWS basics. His projects show he understands deployment beyond just development – the ClimateGPT system is actually being used at Erasmus AI, and his restaurant forecasting system was designed for real deployment with dashboard integration.<br><br>
+
+He's built systems that move from notebooks to production, which requires understanding APIs (he's worked with FastAPI), data pipelines, and how to make models actually usable in business contexts.`;
+        }
+        
+        // 🧹 DATA QUALITY / MESSY DATA
+        if (/(data quality|messy.*data|dirty.*data|data.*clean|handle.*data|data.*issue)/i.test(q)) {
+            return `Real-world data is always messy, and Abhinag's projects reflect that. ClimateGPT integrates 34,000+ data points from different sources and formats – that required extensive cleaning, validation, and transformation work. His restaurant forecasting handles real operational data with missing values and inconsistencies.<br><br>
+
+His approach is systematic: understand the data issues, decide what's salvageable, document assumptions, and build robust pipelines. That data engineering foundation (Pandas, NumPy, ETL) means he's comfortable with the unglamorous work that makes analytics actually possible.`;
         }
         
         // 🏠 RELOCATION
         if (/(relocat|move|willing to move|open to mov|location|remote|onsite|office)/i.test(q)) {
-            return `Abhinag is open to relocation and flexible depending on the opportunity.<br><br>
+            return `Abhinag's flexible on work arrangement – he's worked successfully remote, hybrid, and in-office across different roles. He's focused on finding the right opportunity more than the specific logistics.<br><br>
 
-He's currently based in the United States and is actively seeking roles in data analytics, AI engineering, 
-business intelligence, and related fields. Whether the position is remote, hybrid, or requires relocation 
-to a specific location, he's willing to discuss what makes sense based on the role and the company.<br><br>
+He's open to relocation if that's what the role requires. His experience working with different teams, clients, and leadership across various setups has made him comfortable in pretty much any arrangement.`;
+        }
+        
+        // 🎯 IDEAL ROLE / WHAT'S HE LOOKING FOR
+        if (/(ideal role|what.*looking for|what type.*role|what kind.*role|perfect role|dream role|target role)/i.test(q)) {
+            return `Abhinag's pretty flexible on titles – he cares more about working with data to solve business problems. He's done marketing analytics at AlgoShack, operations at GoGreen, business intelligence at UnyKloud, and AI/ML work with ClimateGPT. That range means he can add value whether it's a Data Analyst, Marketing Analyst, People Analytics, or Data Scientist role.<br><br>
 
-If you're evaluating him for a position that requires relocation, the best approach is to discuss the 
-specifics directly:<br>
-📧 <a href="mailto:mabhinagreddy@gmail.com">mabhinagreddy@gmail.com</a><br>
-📅 <a href="https://calendly.com/mabhinagreddy/30min" target="_blank">Schedule a call</a>`;
+The common thread is results-driven work: 20% efficiency gains, 40% inventory optimization, 79% accuracy on policy intelligence. He's looking for a team that values that impact-focused approach.`;
+        }
+        
+        // ⏰ AVAILABILITY / START DATE
+        if (/(when.*start|availability|available|start date|notice period|how soon)/i.test(q)) {
+            return `He can start with 2 weeks notice. Currently finishing his Master's at George Mason (graduating December 2025), but available before graduation if timing works.`;
+        }
+        
+        // 🔄 WHY LOOKING / WHY CHANGE
+        if (/(why looking|why.*new role|why change|why.*opportunity|why leave)/i.test(q)) {
+            return `He's completing his Master's in Data Analytics Engineering at GMU (December 2025 graduation) and looking to transition into a full-time role where he can apply what he's built. His startup experience showed him he's energized by environments with direct impact – that's what he's seeking next.`;
+        }
+        
+        // 💡 WHAT MAKES DIFFERENT / UNIQUE / STAND OUT (ENHANCED)
+        if (/(what makes.*different|stand out|unique|why him|special|edge|sets.*apart)/i.test(q)) {
+            return `What's unique is that Abhinag was thinking like an analyst before he knew what data analytics was. Early on, he was hired as a content writer but naturally started tracking engagement patterns and user journeys – turned it into something closer to product analytics and drove a 67% engagement increase.<br><br>
+
+That instinct has stayed consistent: always connecting technical work back to business outcomes. He's built 20+ projects that solve real problems, not just academic exercises. It's the combination of practical experience and that natural analytical mindset.`;
+        }
+        
+        // 📖 BACKGROUND / CAREER JOURNEY / STORY
+        if (/(background|career.*path|journey|story|how.*get into|transition)/i.test(q) && !/(education|degree)/i.test(q)) {
+            return `Abhinag has a Mechanical Engineering degree, which seems unrelated until you realize it gave him the problem-solving foundation. He started in content writing (for income), found he loved analyzing patterns, moved to marketing analytics, then business analytics in operations, then data analytics.<br><br>
+
+Working at startups taught him to adapt quickly and work across teams – stakeholders, CEOs, clients. One example: when HR had tracking issues, he took initiative to build a survey system that contributed to 40% improvement in satisfaction scores. That versatility across domains is why he picks up new contexts fast.`;
         }
         
         // ❓ DEFAULT - POLITE REFUSAL
